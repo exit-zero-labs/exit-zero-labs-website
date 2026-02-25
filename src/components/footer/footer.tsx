@@ -1,15 +1,102 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+
+const FOOTER_LINKS = {
+  products: [
+    { label: "Kinnections", href: "/products/kinnections" },
+    { label: "Geo Spot", href: "/products/geo-spot" },
+  ],
+  company: [
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ],
+  legal: [
+    { label: "Privacy", href: "/legal/privacy" },
+    { label: "Terms", href: "/legal/terms" },
+    { label: "Refund Policy", href: "/legal/refund" },
+  ],
+} as const;
 
 export function Footer() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <footer className="bg-zero px-6 py-12 md:py-16">
-      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-8 md:flex-row md:items-start md:justify-between">
-        {/* Left — copyright with easter egg */}
-        <div className="text-center md:text-left">
+      <div className="mx-auto max-w-[1200px]">
+        {/* Link groups */}
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          {/* Wordmark */}
+          <div className="col-span-2 md:col-span-1">
+            <Link
+              href="/"
+              className="font-display text-lg font-semibold text-white transition-colors hover:text-signal"
+            >
+              Exit Zero Labs
+            </Link>
+            <p className="mt-2 font-body text-sm text-mist">
+              Ship clean. Build forward.
+            </p>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-mist/60">
+              Products
+            </h3>
+            <nav aria-label="Products" className="mt-3 flex flex-col gap-2">
+              {FOOTER_LINKS.products.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="font-body text-sm text-mist transition-colors hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-mist/60">
+              Company
+            </h3>
+            <nav aria-label="Company" className="mt-3 flex flex-col gap-2">
+              {FOOTER_LINKS.company.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="font-body text-sm text-mist transition-colors hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-mist/60">
+              Legal
+            </h3>
+            <nav aria-label="Legal" className="mt-3 flex flex-col gap-2">
+              {FOOTER_LINKS.legal.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="font-body text-sm text-mist transition-colors hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Divider + copyright */}
+        <div className="mt-12 border-t border-dusk pt-8 text-center md:text-left">
           <p className="font-body text-sm text-mist">
             &copy; 2026 Exit{" "}
             <button
@@ -33,28 +120,6 @@ export function Footer() {
             Labs
           </p>
         </div>
-
-        {/* Right — links */}
-        <nav aria-label="Footer navigation" className="flex gap-6">
-          <a
-            href="https://kinnections.app"
-            className="font-body text-sm text-mist transition-colors hover:text-white"
-          >
-            Kinnections
-          </a>
-          <a
-            href="#geo-spot"
-            className="font-body text-sm text-mist transition-colors hover:text-white"
-          >
-            Geo Spot
-          </a>
-          <a
-            href="mailto:hello@exitzero.dev"
-            className="font-body text-sm text-mist transition-colors hover:text-white"
-          >
-            Contact
-          </a>
-        </nav>
       </div>
     </footer>
   );

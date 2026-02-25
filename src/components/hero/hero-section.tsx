@@ -44,7 +44,7 @@ export function HeroSection() {
             <Button variant="solid" href="#products">
               See our products
             </Button>
-            <Button variant="ghost" href="#manifesto">
+            <Button variant="ghost" href="/about">
               Our story
             </Button>
           </div>

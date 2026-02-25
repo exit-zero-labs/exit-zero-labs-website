@@ -6,6 +6,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { CursorTrail } from "@/components/cursor-trail";
+import { SiteNav } from "@/components/navigation/site-nav";
 import { SplashScreen } from "@/components/splash-screen";
 
 const sourceSerif = Source_Serif_4({
@@ -67,6 +68,7 @@ export default function RootLayout({
       <body>
         <SplashScreen />
         <CursorTrail />
+        <SiteNav />
         {children}
       </body>
     </html>

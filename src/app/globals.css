@@ -16,7 +16,15 @@
   --font-display: var(--font-source-serif);
   --font-body: var(--font-source-sans);
   --font-mono: var(--font-jetbrains);
+}
 
+/*
+ * Spacing & duration tokens live outside @theme so they don't
+ * collide with Tailwind v4's built-in named scales (e.g.
+ * --spacing-2xl would override max-w-2xl from 42rem → 48px).
+ * Referenced via arbitrary-value syntax: py-[--spacing-4xl].
+ */
+:root {
   /* Spacing (4px base grid) */
   --spacing-xs: 4px;
   --spacing-sm: 8px;

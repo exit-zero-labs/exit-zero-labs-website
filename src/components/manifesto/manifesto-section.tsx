@@ -47,6 +47,16 @@ export function ManifestoSection() {
           </AnimatedText>
         ))}
       </div>
+
+      {/* Link to full story */}
+      <AnimatedText delay={0.5} className="mt-12 text-center">
+        <a
+          href="/about"
+          className="font-body text-sm text-dusk underline underline-offset-2 transition-colors hover:text-zero"
+        >
+          Read our full story →
+        </a>
+      </AnimatedText>
     </SectionWrapper>
   );
 }

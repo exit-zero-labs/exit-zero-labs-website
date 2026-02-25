@@ -53,9 +53,12 @@ export function KinnectionsSection() {
           </AnimatedText>
 
           <AnimatedText delay={0.3}>
-            <div className="mt-8">
-              <Button variant="solid" href="https://kinnections.app">
-                Try Kinnections
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button variant="solid" href="/products/kinnections">
+                Learn more
+              </Button>
+              <Button variant="ghost" href="https://kinnections.app">
+                Try it now →
               </Button>
             </div>
           </AnimatedText>

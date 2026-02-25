@@ -53,8 +53,14 @@ export function GeoSpotSection() {
           </AnimatedText>
 
           <AnimatedText delay={0.3}>
-            <div className="mt-8">
+            <div className="mt-8 space-y-4">
               <EmailCapture />
+              <a
+                href="/products/geo-spot"
+                className="inline-block font-body text-sm text-signal underline underline-offset-2 transition-colors hover:text-white"
+              >
+                Learn more about Geo Spot →
+              </a>
             </div>
           </AnimatedText>
         </div>
