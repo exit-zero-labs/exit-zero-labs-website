@@ -19,14 +19,14 @@ export function HeroSection() {
 
       {/* Giant "exit 0" watermark */}
       <div
-        className="pointer-events-none absolute bottom-8 right-8 select-none font-mono text-[clamp(6rem,20vw,16rem)] font-normal leading-none text-white/[0.04]"
+        className="pointer-events-none absolute bottom-8 right-8 select-none font-mono text-[clamp(6rem,20vw,16rem)] font-normal leading-none text-white/4"
         aria-hidden="true"
       >
         exit 0
       </div>
 
       {/* Content */}
-      <div className="relative mx-auto w-full max-w-[1200px]">
+      <div className="relative mx-auto w-full max-w-300">
         <div className="max-w-2xl max-md:mx-auto max-md:text-center">
           <TerminalTyper className="mb-6" />
 

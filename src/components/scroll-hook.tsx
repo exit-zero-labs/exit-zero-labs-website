@@ -14,7 +14,7 @@ export function ScrollHook() {
       aria-hidden="true"
     >
       <motion.span
-        className="font-mono text-sm text-mist md:text-base"
+        className="font-mono text-sm text-mist md:text-base py-10"
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
         transition={{ type: "spring", stiffness: 120, damping: 20 }}

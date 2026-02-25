@@ -23,7 +23,7 @@ export function GeoSpotSection() {
       ariaLabel="Geo Spot — geography gaming platform"
       className="bg-zero"
     >
-      <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+      <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16 py-20">
         {/* Globe — left on desktop, below on mobile */}
         <div className="order-2 md:order-1 max-md:mx-auto max-md:max-w-xs">
           <Globe />

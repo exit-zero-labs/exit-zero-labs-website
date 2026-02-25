@@ -13,10 +13,10 @@ export function KinnectionsSection() {
       ariaLabel="Kinnections — relationship mapper"
       className="bg-dusk"
     >
-      <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+      <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16 py-20">
         {/* Product image — left on desktop */}
         <TiltCard className="order-2 md:order-1">
-          <div className="flex aspect-[4/3] items-center justify-center rounded-lg border border-white/10 bg-zero">
+          <div className="flex aspect-4/3 items-center justify-center rounded-lg border border-white/10 bg-zero">
             <div className="text-center">
               <span className="font-mono text-sm text-mist">
                 [ product screenshot ]

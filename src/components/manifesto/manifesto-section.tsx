@@ -23,7 +23,7 @@ export function ManifestoSection() {
     <SectionWrapper
       id="manifesto"
       ariaLabel="Manifesto — Why We Build"
-      className="bg-canvas"
+      className="bg-canvas py-20"
     >
       {/* Pull quote */}
       <AnimatedText className="mx-auto max-w-3xl text-center">

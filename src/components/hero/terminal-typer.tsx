@@ -4,7 +4,9 @@ import { useCallback, useEffect, useState } from "react";
 
 const LINES = [
   { text: "> building something that matters", typingSpeed: 40 },
-  { text: "> Ship clean. Build forward.", typingSpeed: 0 },
+  { text: "> exit 0 — no errors, no compromises", typingSpeed: 40 },
+  { text: "> connect people, not just pixels", typingSpeed: 40 },
+  { text: "> Ship clean. Build forward.", typingSpeed: 40 },
 ];
 
 const RESOLVE_PAUSE = 800;
@@ -44,7 +46,7 @@ export function TerminalTyper({ className }: TerminalTyperProps) {
       if (nextLength >= line.text.length) {
         /* Finished typing this line */
         setTimeout(() => {
-          setCurrentLine(1);
+          setCurrentLine((prev) => (prev + 1) % LINES.length);
           setDisplayText("");
         }, RESOLVE_PAUSE);
       }
@@ -82,7 +84,7 @@ export function TerminalTyper({ className }: TerminalTyperProps) {
     return (
       <div className={className}>
         <span className="font-mono text-signal text-sm md:text-base">
-          {LINES[1].text}
+          {LINES[LINES.length - 1].text}
         </span>
       </div>
     );
