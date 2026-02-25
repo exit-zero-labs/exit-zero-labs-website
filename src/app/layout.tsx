@@ -5,6 +5,7 @@ import {
   Source_Serif_4,
 } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { CursorTrail } from "@/components/cursor-trail";
 import { SiteNav } from "@/components/navigation/site-nav";
 import { SplashScreen } from "@/components/splash-screen";
@@ -70,6 +71,7 @@ export default function RootLayout({
         <CursorTrail />
         <SiteNav />
         {children}
+        <Analytics />
       </body>
     </html>
   );
