@@ -7,9 +7,24 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { PageHeader } from "@/components/ui/page-header";
 
 export const metadata: Metadata = {
-  title: "Geo Spot — Exit Zero Labs",
+  title: "Geo Spot — Geography & Culture Quiz App",
   description:
-    "An offline-first geography gaming platform. Explore real places, challenge friends, and learn the world.",
+    "Geo Spot is a mobile quiz platform for geography, culture, sports, and news. Play Pin Point free — or unlock all game modes with Passport. iOS & Android.",
+  openGraph: {
+    title: "Geo Spot — Geography & Culture Quiz App",
+    description:
+      "A mobile quiz platform for geography, culture, sports, and news. Play Pin Point free. iOS & Android.",
+    url: "https://exitzerolabs.com/products/geo-spot",
+    type: "website",
+  },
+  twitter: {
+    title: "Geo Spot — Geography & Culture Quiz App",
+    description:
+      "A mobile quiz platform for geography, culture, sports, and news. Play Pin Point free. iOS & Android.",
+  },
+  alternates: {
+    canonical: "https://exitzerolabs.com/products/geo-spot",
+  },
 };
 
 const FEATURES = [
@@ -40,8 +55,54 @@ const FEATURES = [
 ] as const;
 
 export default function GeoSpotPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    name: "Geo Spot",
+    applicationCategory: "GameApplication",
+    applicationSubCategory: "EducationalGame",
+    operatingSystem: "iOS, Android",
+    description:
+      "A mobile quiz platform for geography, culture, sports, and news. Play Pin Point free — or unlock all game modes with Passport.",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Pin Point",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        description: "Place-a-pin-on-map game mode — free forever",
+      },
+      {
+        "@type": "Offer",
+        name: "Passport",
+        priceCurrency: "USD",
+        availability: "https://schema.org/PreOrder",
+        description:
+          "Unlocks all current and future game modes plus exclusive features",
+      },
+    ],
+    featureList: [
+      "Offline-first gameplay",
+      "5 game modes",
+      "Geography, culture, sports, and news content",
+      "Curated content Packs",
+      "Challenge friends",
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "Exit Zero Labs",
+      url: "https://exitzerolabs.com",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-zero">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: structured data is static, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },

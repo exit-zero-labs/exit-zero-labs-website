@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: "Contact — Exit Zero Labs",
   description:
     "Get in touch with Exit Zero Labs for support, sales, partnerships, or general inquiries.",
+  openGraph: {
+    title: "Contact Exit Zero Labs",
+    description:
+      "Get in touch for support, partnerships, or general inquiries.",
+    url: "https://exitzerolabs.com/contact",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://exitzerolabs.com/contact",
+  },
 };
 
 export default function ContactPage() {

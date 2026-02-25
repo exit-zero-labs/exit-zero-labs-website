@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { LegalSidebar } from "@/components/legal/legal-sidebar";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function LegalLayout({
   children,

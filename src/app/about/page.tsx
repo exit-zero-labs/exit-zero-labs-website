@@ -7,7 +7,17 @@ import { PageHeader } from "@/components/ui/page-header";
 export const metadata: Metadata = {
   title: "About — Exit Zero Labs",
   description:
-    "The story behind Exit Zero Labs. Bootstrapped indie software, built with care.",
+    "The story behind Exit Zero Labs. Bootstrapped indie software, built with care. No investors, no growth hacks — just tools built for people who care about quality.",
+  openGraph: {
+    title: "About Exit Zero Labs",
+    description:
+      "Bootstrapped indie software, built with care. No investors, no growth hacks.",
+    url: "https://exitzerolabs.com/about",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://exitzerolabs.com/about",
+  },
 };
 
 export default function AboutPage() {

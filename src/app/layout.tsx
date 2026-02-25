@@ -32,7 +32,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Exit Zero Labs — Ship clean. Build forward.",
+  metadataBase: new URL("https://exitzerolabs.com"),
+  title: {
+    default: "Exit Zero Labs — Ship clean. Build forward.",
+    template: "%s | Exit Zero Labs",
+  },
   description:
     "Indie software, made with care. Makers of Kinnections and Geo Spot. Built by Exit Zero Labs.",
   openGraph: {
@@ -41,12 +45,25 @@ export const metadata: Metadata = {
       "Indie software, made with care. Makers of Kinnections and Geo Spot.",
     siteName: "Exit Zero Labs",
     type: "website",
+    url: "https://exitzerolabs.com",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Exit Zero Labs — Ship clean. Build forward.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Exit Zero Labs — Ship clean. Build forward.",
     description:
       "Indie software, made with care. Makers of Kinnections and Geo Spot.",
+    images: ["/opengraph-image"],
+  },
+  alternates: {
+    canonical: "https://exitzerolabs.com",
   },
 };
 
@@ -67,6 +84,22 @@ export default function RootLayout({
       className={`${sourceSerif.variable} ${sourceSans.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: structured data is static, not user input
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Exit Zero Labs",
+              url: "https://exitzerolabs.com",
+              description:
+                "Indie software company building privacy-first tools. Makers of Kinnections and Geo Spot.",
+              foundingDate: "2024",
+              sameAs: ["https://kinnections.app"],
+            }),
+          }}
+        />
         <SplashScreen />
         <CursorTrail />
         <SiteNav />

@@ -6,9 +6,24 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { PageHeader } from "@/components/ui/page-header";
 
 export const metadata: Metadata = {
-  title: "Kinnections — Exit Zero Labs",
+  title: "Kinnections — Encrypted Relationship Mapper",
   description:
-    "An end-to-end encrypted, infinite-canvas relationship mapper. Know your people.",
+    "Kinnections is an end-to-end encrypted, infinite-canvas relationship mapper. Your data is encrypted on your device — we can't read it. Know your people, privately.",
+  openGraph: {
+    title: "Kinnections — Encrypted Relationship Mapper",
+    description:
+      "End-to-end encrypted relationship mapping. Your data stays yours — encrypted on your device before it ever reaches our servers.",
+    url: "https://exitzerolabs.com/products/kinnections",
+    type: "website",
+  },
+  twitter: {
+    title: "Kinnections — Encrypted Relationship Mapper",
+    description:
+      "End-to-end encrypted relationship mapping. Your data stays yours.",
+  },
+  alternates: {
+    canonical: "https://exitzerolabs.com/products/kinnections",
+  },
 };
 
 const FEATURES = [
@@ -47,8 +62,44 @@ const PRICING_FEATURES = [
 ] as const;
 
 export default function KinnectionsPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Kinnections",
+    url: "https://kinnections.app",
+    applicationCategory: "ProductivityApplication",
+    operatingSystem: "Web",
+    description:
+      "An end-to-end encrypted, infinite-canvas relationship mapper. Your relationship data is encrypted on your device before it reaches our servers.",
+    offers: {
+      "@type": "Offer",
+      price: "49.00",
+      priceCurrency: "USD",
+      priceValidUntil: "2026-12-31",
+      availability: "https://schema.org/InStock",
+      description:
+        "Annual subscription — unlimited maps, E2E encryption, cross-device sync",
+    },
+    featureList: [
+      "End-to-end encryption",
+      "Infinite canvas",
+      "Cross-device sync",
+      "Data export",
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "Exit Zero Labs",
+      url: "https://exitzerolabs.com",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-zero">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: structured data is static, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
