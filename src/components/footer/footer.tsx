@@ -24,7 +24,7 @@ export function Footer() {
 
   return (
     <footer className="bg-zero px-6 py-12 md:py-16">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-300">
         {/* Link groups */}
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Wordmark */}
@@ -33,7 +33,7 @@ export function Footer() {
               href="/"
               className="font-display text-lg font-semibold text-white transition-colors hover:text-signal"
             >
-              Exit Zero Labs
+              Exit Zero Labs LLC
             </Link>
             <p className="mt-2 font-body text-sm text-mist">
               Ship clean. Build forward.
