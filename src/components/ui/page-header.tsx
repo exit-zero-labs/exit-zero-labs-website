@@ -9,7 +9,7 @@ type PageHeaderProps = {
   subtitle?: string;
   badge?: {
     text: string;
-    color: "ember" | "signal" | "forge";
+    color: "ember" | "signal" | "forge" | "terra";
   };
   className?: string;
 };
@@ -22,7 +22,7 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <div
-      className={cn("bg-zero px-6 pt-32 pb-16 md:pt-40 md:pb-20", className)}
+      className={cn("bg-zero px-4 sm:px-6 pt-28 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20", className)}
     >
       <div className="mx-auto max-w-[1200px]">
         {badge && (
@@ -34,7 +34,7 @@ export function PageHeader({
         <AnimatedText
           as="h1"
           className={cn(
-            "font-display text-4xl font-bold tracking-tight text-white md:text-6xl",
+            "font-display text-3xl font-bold tracking-tight leading-[1.15] text-white sm:text-4xl md:text-6xl",
             badge && "mt-4",
           )}
           delay={badge ? 0.1 : 0}

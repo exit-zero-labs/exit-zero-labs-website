@@ -114,7 +114,7 @@ export default function KinnectionsPage() {
       />
 
       {/* Hero Screenshot */}
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
         <ScreenshotPlaceholder
           label="kinnections app screenshot"
           sublabel="kinnections.app"
@@ -125,7 +125,7 @@ export default function KinnectionsPage() {
       {/* Features */}
       <section
         aria-label="Features"
-        className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-28"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 md:pt-28"
       >
         <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
           Built different
@@ -140,7 +140,7 @@ export default function KinnectionsPage() {
       {/* Tech differentiator */}
       <section
         aria-label="Security"
-        className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-28"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 md:pt-28"
       >
         <div className="rounded-lg border border-ember/20 bg-ember/5 p-8 md:p-10">
           <h2 className="font-display text-2xl font-bold text-ember md:text-3xl">
@@ -158,7 +158,7 @@ export default function KinnectionsPage() {
       {/* Pricing */}
       <section
         aria-label="Pricing"
-        className="mx-auto max-w-[1200px] px-6 pt-20 pb-20 md:pt-28 md:pb-32"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 pb-20 md:pt-28 md:pb-32"
       >
         <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">
           <div>

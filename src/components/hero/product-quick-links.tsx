@@ -22,7 +22,7 @@ const LINKS = [
     label: "Geo Spot",
     href: "#geo-spot",
     color:
-      "hover:border-signal/60 hover:text-signal hover:shadow-[0_0_16px_rgba(0,217,126,0.25)]",
+      "hover:border-terra/60 hover:text-terra hover:shadow-[0_0_16px_rgba(215,122,97,0.25)]",
   },
 ] as const;
 

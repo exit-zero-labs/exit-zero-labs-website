@@ -113,7 +113,7 @@ export default function GeoSpotPage() {
       <PageHeader
         title="The world is your playing field"
         subtitle="Geo Spot is an offline-first geography gaming platform. Explore real places, challenge friends, and learn the world — one spot at a time."
-        badge={{ text: "Coming Soon", color: "signal" }}
+        badge={{ text: "Coming Soon", color: "terra" }}
       />
 
       {/* Globe */}
@@ -124,7 +124,7 @@ export default function GeoSpotPage() {
       {/* Features */}
       <section
         aria-label="Features"
-        className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-28"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 md:pt-28"
       >
         <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
           What we&apos;re building
@@ -139,11 +139,11 @@ export default function GeoSpotPage() {
       {/* Status */}
       <section
         aria-label="Development status"
-        className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-28"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 md:pt-28"
       >
         <StatusBanner
           badge="In Development"
-          badgeColor="signal"
+          badgeColor="terra"
           title="Building in the open"
           description="Geo Spot is actively being developed. We're building the core gameplay engine, offline map system, and multiplayer infrastructure. The beta will be free — no payment required to try it."
         />
@@ -152,7 +152,7 @@ export default function GeoSpotPage() {
       {/* Vision */}
       <section
         aria-label="Vision"
-        className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-28"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 md:pt-28"
       >
         <div className="max-w-2xl">
           <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
@@ -175,9 +175,9 @@ export default function GeoSpotPage() {
       {/* Email capture */}
       <section
         aria-label="Get notified"
-        className="mx-auto max-w-[1200px] px-6 pt-20 pb-20 md:pt-28 md:pb-32"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 pb-20 md:pt-28 md:pb-32"
       >
-        <div className="rounded-lg border border-signal/20 bg-signal/5 p-8 md:p-10">
+        <div className="rounded-lg border border-terra/20 bg-terra/5 p-8 md:p-10">
           <h2 className="font-display text-2xl font-bold text-white md:text-3xl">
             Get notified when we launch
           </h2>

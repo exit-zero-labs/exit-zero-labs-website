@@ -119,7 +119,7 @@ export default function ThreatForgePage() {
       />
 
       {/* Hero Screenshot */}
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
         <ScreenshotPlaceholder
           label="threat forge app screenshot"
           sublabel="threatforge.dev"
@@ -130,7 +130,7 @@ export default function ThreatForgePage() {
       {/* Features */}
       <section
         aria-label="Features"
-        className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-28"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 md:pt-28"
       >
         <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
           Security tooling that respects developers
@@ -146,7 +146,7 @@ export default function ThreatForgePage() {
       {/* Open source callout */}
       <section
         aria-label="Open Source"
-        className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-28"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 md:pt-28"
       >
         <div className="rounded-lg border border-forge/20 bg-forge/5 p-8 md:p-10">
           <h2 className="font-display text-2xl font-bold text-forge md:text-3xl">
@@ -165,7 +165,7 @@ export default function ThreatForgePage() {
       {/* CTA */}
       <section
         aria-label="Download"
-        className="mx-auto max-w-[1200px] px-6 pt-20 pb-20 md:pt-28 md:pb-32"
+        className="mx-auto max-w-[1200px] px-4 sm:px-6 pt-20 pb-20 md:pt-28 md:pb-32"
       >
         <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">
           <div>

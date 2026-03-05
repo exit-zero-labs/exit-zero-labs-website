@@ -19,7 +19,7 @@ export function SectionWrapper({
     <section
       id={id}
       aria-label={ariaLabel}
-      className={cn("px-6 py-[--spacing-4xl] md:py-[--spacing-5xl]", className)}
+      className={cn("px-4 sm:px-6 py-[--spacing-4xl] md:py-[--spacing-5xl]", className)}
     >
       <div className={cn("mx-auto max-w-[1200px]", innerClassName)}>
         {children}

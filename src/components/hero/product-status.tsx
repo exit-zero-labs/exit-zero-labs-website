@@ -27,8 +27,8 @@ const PRODUCTS = [
     version: "v0.9.0",
     status: "BETA",
     progress: 60,
-    color: "text-signal",
-    barColor: "bg-signal",
+    color: "text-terra",
+    barColor: "bg-terra",
     href: "#geo-spot",
   },
 ] as const;

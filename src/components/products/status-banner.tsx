@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 
 type StatusBannerProps = {
   badge: string;
-  badgeColor?: "ember" | "signal" | "forge";
+  badgeColor?: "ember" | "signal" | "forge" | "terra";
   title: string;
   description: string;
   className?: string;

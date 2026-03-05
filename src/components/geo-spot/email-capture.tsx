@@ -15,7 +15,7 @@ export function EmailCapture() {
 
   if (submitted) {
     return (
-      <p className="font-mono text-sm text-signal">
+      <p className="font-mono text-sm text-terra">
         ✓ You&apos;re on the list. We&apos;ll be in touch.
       </p>
     );
@@ -29,12 +29,12 @@ export function EmailCapture() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Get notified"
-        className="flex-1 rounded-l-md border border-dusk bg-transparent px-4 py-3 font-body text-sm text-white placeholder:text-mist/60 focus:border-signal focus:outline-none"
+        className="flex-1 rounded-l-md border border-dusk bg-transparent px-4 py-3 font-body text-sm text-white placeholder:text-mist/60 focus:border-terra focus:outline-none"
         aria-label="Email address for Geo Spot launch notification"
       />
       <button
         type="submit"
-        className="flex items-center justify-center rounded-r-md bg-signal px-4 py-3 text-zero transition-colors hover:bg-signal/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-zero"
+        className="flex items-center justify-center rounded-r-md bg-terra px-4 py-3 text-white transition-colors hover:bg-terra/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-terra focus-visible:ring-offset-2 focus-visible:ring-offset-zero"
         aria-label="Submit email"
       >
         <svg

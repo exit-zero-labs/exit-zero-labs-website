@@ -14,7 +14,7 @@ const ParticleField = dynamic(
 
 export function HeroSection() {
   return (
-    <header className="relative flex min-h-screen items-center overflow-hidden bg-zero px-6">
+    <header className="relative flex min-h-screen items-center overflow-hidden bg-zero px-4 sm:px-6">
       {/* Particle network field */}
       <ParticleField />
 
@@ -50,22 +50,22 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative mx-auto w-full max-w-[1200px]">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-12 lg:gap-16 lg:grid-cols-2">
           {/* Left: headline + CTAs */}
           <div className="max-lg:mx-auto max-lg:max-w-xl max-lg:text-center">
             <TerminalTyper className="mb-6" />
 
-            <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-6xl xl:text-7xl">
+            <h1 className="font-display text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl xl:text-7xl">
               Ship clean.
               <br />
               <span className="text-signal">Build forward.</span>
             </h1>
 
-            <p className="mt-6 font-display text-lg text-mist md:text-xl">
+            <p className="mt-5 font-display text-base text-mist sm:text-lg md:text-xl">
               Indie software, made with care.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4 max-lg:justify-center">
+            <div className="mt-8 flex flex-wrap gap-3 max-lg:justify-center sm:gap-4 sm:mt-10">
               <Button variant="solid" href="#products">
                 See our products
               </Button>
@@ -74,11 +74,11 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <ProductQuickLinks className="mt-8 max-lg:justify-center" />
+            <ProductQuickLinks className="mt-6 max-lg:justify-center sm:mt-8" />
           </div>
 
-          {/* Right: system status panel */}
-          <div className="max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+          {/* Right: system status panel — hidden on small mobile, visible from sm up */}
+          <div className="hidden sm:block max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
             <ProductStatus />
           </div>
         </div>

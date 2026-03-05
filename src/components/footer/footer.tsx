@@ -18,7 +18,7 @@ const FOOTER_LINKS = {
     {
       label: "Geo Spot",
       href: "/products/geo-spot",
-      hoverColor: "hover:text-signal",
+      hoverColor: "hover:text-terra",
     },
   ],
   company: [
@@ -44,10 +44,10 @@ export function Footer() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <footer className="bg-zero px-6 py-12 md:py-16">
+    <footer className="bg-zero px-4 sm:px-6 py-12 md:py-16">
       <div className="mx-auto max-w-[1200px]">
         {/* Link groups */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-8 md:grid-cols-4">
           {/* Wordmark */}
           <div className="col-span-2 md:col-span-1">
             <Link

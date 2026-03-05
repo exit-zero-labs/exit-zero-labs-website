@@ -10,12 +10,16 @@ export function ThreatForgeMockup() {
       className="relative overflow-hidden rounded-xl border border-forge/30 bg-zero shadow-2xl shadow-forge/10"
       aria-hidden="true"
       style={{ transform: "rotate(1deg)" }}
-      onMouseEnter={(e) =>
-        ((e.currentTarget as HTMLElement).style.transform = "rotate(0deg)")
-      }
-      onMouseLeave={(e) =>
-        ((e.currentTarget as HTMLElement).style.transform = "rotate(1deg)")
-      }
+      onMouseEnter={(e) => {
+        if (window.innerWidth >= 768) {
+          (e.currentTarget as HTMLElement).style.transform = "rotate(0deg)";
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (window.innerWidth >= 768) {
+          (e.currentTarget as HTMLElement).style.transform = "rotate(1deg)";
+        }
+      }}
       role="presentation"
     >
       {/* Title bar */}

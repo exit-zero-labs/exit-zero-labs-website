@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 
 type PillBadgeProps = {
   children: React.ReactNode;
-  color?: "ember" | "signal" | "forge";
+  color?: "ember" | "signal" | "forge" | "terra";
   className?: string;
 };
 
@@ -18,6 +18,7 @@ export function PillBadge({
         color === "ember" && "bg-ember text-white",
         color === "signal" && "bg-signal text-zero",
         color === "forge" && "bg-forge text-white",
+        color === "terra" && "bg-terra text-white",
         className,
       )}
     >

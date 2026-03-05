@@ -45,29 +45,29 @@ export function GeoSpotSection() {
       ariaLabel="Geo Spot — geography gaming platform"
       className="relative overflow-hidden bg-zero"
     >
-      {/* Topographic-style pattern overlay */}
+      {/* Topographic-style pattern overlay — warm terracotta lines */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.015]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath d='M0 50 Q25 30 50 50 Q75 70 100 50' stroke='%2300D97E' fill='none' stroke-width='1'/%3E%3Cpath d='M0 30 Q25 10 50 30 Q75 50 100 30' stroke='%2300D97E' fill='none' stroke-width='1'/%3E%3Cpath d='M0 70 Q25 50 50 70 Q75 90 100 70' stroke='%2300D97E' fill='none' stroke-width='1'/%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath d='M0 50 Q25 30 50 50 Q75 70 100 50' stroke='%23D77A61' fill='none' stroke-width='1'/%3E%3Cpath d='M0 30 Q25 10 50 30 Q75 50 100 30' stroke='%23D77A61' fill='none' stroke-width='1'/%3E%3Cpath d='M0 70 Q25 50 50 70 Q75 90 100 70' stroke='%23D77A61' fill='none' stroke-width='1'/%3E%3C/svg%3E")`,
           backgroundSize: "100px 100px",
         }}
         aria-hidden="true"
       />
 
-      {/* Signal radial accent */}
+      {/* Terra radial accent — warm earthy glow */}
       <div
         className="pointer-events-none absolute -left-32 bottom-0 h-[500px] w-[500px] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(0,217,126,0.04) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(215,122,97,0.05) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />
 
-      {/* Section divider */}
+      {/* Section divider — warm terra */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-px bg-signal/20"
+        className="absolute top-0 left-0 right-0 h-px bg-terra/20"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
@@ -78,11 +78,11 @@ export function GeoSpotSection() {
 
       <div className="grid items-center gap-12 py-20 md:grid-cols-2 md:gap-16">
         {/* Globe — left on desktop, below on mobile */}
-        <div className="order-2 md:order-1 max-md:mx-auto max-md:max-w-xs">
-          {/* Globe with signal glow halo */}
+        <div className="order-2 md:order-1 max-md:mx-auto max-md:max-w-[280px]">
+          {/* Globe with warm terra glow halo */}
           <div
             className="relative"
-            style={{ filter: "drop-shadow(0 0 40px rgba(0,217,126,0.12))" }}
+            style={{ filter: "drop-shadow(0 0 40px rgba(215,122,97,0.15))" }}
           >
             <Globe />
           </div>
@@ -91,7 +91,7 @@ export function GeoSpotSection() {
         {/* Text + form — right on desktop, first on mobile */}
         <div className="order-1 md:order-2">
           <AnimatedText>
-            <PillBadge color="signal">Coming Soon</PillBadge>
+            <PillBadge color="terra">Coming Soon</PillBadge>
           </AnimatedText>
 
           <AnimatedText
@@ -101,7 +101,7 @@ export function GeoSpotSection() {
           >
             The world is your
             <br />
-            <span className="text-signal">playing field.</span>
+            <span className="text-terra">playing field.</span>
           </AnimatedText>
 
           {/* Game modes */}
@@ -123,7 +123,7 @@ export function GeoSpotSection() {
                 <span
                   className={`font-mono text-[10px] rounded-full px-2 py-0.5 ${
                     mode.status === "Free"
-                      ? "bg-signal/10 text-signal border border-signal/20"
+                      ? "bg-terra/10 text-terra border border-terra/25"
                       : "bg-white/5 text-mist/50 border border-white/10"
                   }`}
                 >

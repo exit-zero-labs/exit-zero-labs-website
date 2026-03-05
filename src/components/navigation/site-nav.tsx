@@ -18,7 +18,7 @@ export function SiteNav() {
   return (
     <>
       <header className="fixed top-0 right-0 left-0 z-50 bg-zero/90 backdrop-blur-sm">
-        <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
+        <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-6">
           {/* Wordmark */}
           <Link
             href="/"
